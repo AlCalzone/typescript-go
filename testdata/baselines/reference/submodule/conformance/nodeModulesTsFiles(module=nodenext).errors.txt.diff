@@ -1,0 +1,17 @@
+--- old.nodeModulesTsFiles(module=nodenext).errors.txt
++++ new.nodeModulesTsFiles(module=nodenext).errors.txt
+@@= skipped -0, +0 lines =@@
+-<no content>
++/index.ts(1,21): error TS2877: This import uses a '.ts' extension to resolve to an input TypeScript file, but will not be rewritten during emit because it is not a relative path.
++
++
++==== /index.ts (1 errors) ====
++    import { add } from "lodash-ts/add.ts"; // Ok
++                        ~~~~~~~~~~~~~~~~~~
++!!! error TS2877: This import uses a '.ts' extension to resolve to an input TypeScript file, but will not be rewritten during emit because it is not a relative path.
++    
++==== /node_modules/lodash-ts/add.ts (0 errors) ====
++    export function add(a: number, b: number) {
++        return a + b;
++    }
++    

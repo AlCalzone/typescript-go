@@ -1,0 +1,17 @@
+index.mts(1,16): error TS2876: This relative import path is unsafe to rewrite because it looks like a file name, but actually resolves to "example.json".
+index.mts(2,16): error TS2876: This relative import path is unsafe to rewrite because it looks like a file name, but actually resolves to "styles.d.css.ts".
+
+
+==== example.json (0 errors) ====
+    {}
+    
+==== styles.d.css.ts (0 errors) ====
+    export {};
+    
+==== index.mts (2 errors) ====
+    import {} from "./example.json" with { type: "json" }; // Ok
+                   ~~~~~~~~~~~~~~~~
+!!! error TS2876: This relative import path is unsafe to rewrite because it looks like a file name, but actually resolves to "example.json".
+    import {} from "./styles.css"; // Ok
+                   ~~~~~~~~~~~~~~
+!!! error TS2876: This relative import path is unsafe to rewrite because it looks like a file name, but actually resolves to "styles.d.css.ts".
