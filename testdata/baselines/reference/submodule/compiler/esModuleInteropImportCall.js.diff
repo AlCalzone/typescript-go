@@ -21,7 +21,7 @@
 -        return result;
 -    };
 -})();
--Promise.resolve().then(function () { return __importStar(require("./foo")); }).then(function (f) {
+-Promise.resolve().then(function () { return __importStar(require("./foo")); }).then(f => {
 +var __importStar = (this && this.__importStar) || function (mod) {
 +    if (mod && mod.__esModule) return mod;
 +    var result = {};
